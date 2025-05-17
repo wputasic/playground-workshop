@@ -11,6 +11,7 @@
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       workshop-wc-lisbon
+ * Domain Path:       /languages
  */
 
  
@@ -22,7 +23,7 @@
 function gt_add_dashboard_widgets() {
 	wp_add_dashboard_widget(
 		'gt_dashboard_widget',                          // Widget slug.
-		esc_html__( 'Welcome to Playground!', 'gt' ), // Title.
+		esc_html__( 'Welcome to Playground!', 'workshop-wc-lisbon' ), // Title.
 		'gt_dashboard_widget_render'                    // Display function.
 	); 
     // Globalize the metaboxes array, this holds all the widgets for wp-admin.
@@ -57,7 +58,7 @@ function gt_dashboard_widget_render() {
         if ( isset($_POST['gt_note']) ) {
             $note = sanitize_textarea_field($_POST['gt_note']);
             update_user_meta($user_id, $meta_key, $note);
-            $message = '<div style="color:green;">Note saved!</div>';
+            $message = '<div style="color:green;">' . esc_html__('Note saved!', 'workshop-wc-lisbon') . '</div>';
         }
     }
 
@@ -65,10 +66,10 @@ function gt_dashboard_widget_render() {
     ?>
     <?php echo $message; ?>
     <form method="post">
-        <label for="gt_note">Quick Note (only you can see this):</label><br>
+        <label for="gt_note"><?php esc_html_e('Quick Note (only you can see this):', 'workshop-wc-lisbon'); ?></label><br>
         <textarea name="gt_note" id="gt_note" rows="3" cols="40"><?php echo esc_textarea($note); ?></textarea><br>
         <?php wp_nonce_field('gt_save_note', 'gt_note_nonce'); ?>
-        <input type="submit" value="Save Note" class="button button-primary">
+        <input type="submit" value="<?php esc_attr_e('Save Note', 'workshop-wc-lisbon'); ?>" class="button button-primary">
     </form>
     <?php
 }
