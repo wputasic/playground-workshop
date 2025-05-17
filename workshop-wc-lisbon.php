@@ -14,7 +14,18 @@
  * Domain Path:       /languages
  */
 
- 
+/**
+ * Load plugin text domain.
+ */
+function workshop_wc_lisbon_load_textdomain() {
+    load_plugin_textdomain(
+        'workshop-wc-lisbon',
+        false,
+        dirname( plugin_basename( __FILE__ ) ) . '/languages'
+    );
+}
+add_action( 'plugins_loaded', 'workshop_wc_lisbon_load_textdomain' );
+
 /**
  * Add a widget to the dashboard.
  *
