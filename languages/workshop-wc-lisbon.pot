@@ -1,0 +1,28 @@
+# Copyright (C) 2024 Uros Tasic
+msgid ""
+msgstr ""
+"Project-Id-Version: Workshop WordCamp Lisbon 2025 0.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/workshop-wc-lisbon\n"
+"POT-Creation-Date: 2024-03-19 12:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2024-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: workshop-wc-lisbon.php:35
+msgid "Welcome to Playground!"
+msgstr ""
+
+#: workshop-wc-lisbon.php:58
+msgid "Note saved!"
+msgstr ""
+
+#: workshop-wc-lisbon.php:65
+msgid "Quick Note (only you can see this):"
+msgstr ""
+
+#: workshop-wc-lisbon.php:68
+msgid "Save Note"
+msgstr "" 
